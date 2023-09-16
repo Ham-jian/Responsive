@@ -1,0 +1,370 @@
+
+/* _______________________________Tablet */
+/* 768~1399 범위의 해상도 */
+@media screen and (min-width: 768px) and (max-width: 1399px){
+
+/* HEADER======================================== */
+header{
+  padding-top: 10px;
+}
+nav{
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+/* MAIN=================================== */
+.mainText{
+  font-size: 100px;
+  font-size: 6.250rem;
+}
+.mainText img, .mainText video{
+  height: 90px;
+}
+.mainText .mt1 video{display: none;}
+.mt3{flex-direction: row-reverse;}
+
+/* SECTION========================================= */
+section{
+  padding: 100px 10px 0;
+}
+/* trend1//////////////////// */
+section>div{flex-direction: column;}
+.part1{
+  flex-direction: row;
+  gap: 10px;
+  height: 210px;
+}
+.title{
+  width: 50%;
+  height: 210px;
+}
+.title h2{
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+.title h3{
+  font-size: 40px;
+  font-size: 2.500rem;
+}
+.box{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.box p{
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+.box i{
+  display: block;
+  text-align: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.part2{
+  width: 100%;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: transparent;
+}
+.part2 img{
+  width: 100%;
+  height: 600px;
+  border-radius: 20px;
+  background-color: #eee;
+}
+.part2 video{
+  width: 100%;
+  height: 700px;
+  border-radius: 20px;
+  background-color: #eee;
+}
+
+.hashTag{
+  position: static;
+  height: 50px;
+}
+.hashTag li{height: 50px;}
+
+#trend02{flex-direction: column-reverse;}
+#trend02 .part1{flex-direction: row-reverse;}
+
+/* trend4//////////////////// */
+#trend04{padding: 130px 0 50px 0;}
+.tboxes{gap: 50px;}
+.tbox{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+}
+.tbox img{height: 350px;}
+
+.desc{
+  position: static;
+  background-color: transparent;
+  padding: 10px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.desc h3{
+  color: #fff;
+  font-size: 24px;
+  font-weight: normal;
+}
+.desc .hashTag{
+  position: static;
+}
+.desc .hashTag li{
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+/* 텍스트 애니메이션 */
+.txtAnimation{padding: 0 0 50px 0;}
+
+/* FOOTER============================== */
+footer{
+  padding: 50px 10px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+}
+
+/* ______________________________Mobile */
+/* 767이하 ~범위의 해상도 */
+@media screen and (max-width: 767px){
+
+  /* HEADER======================================== */
+header{padding-top: 0px;}
+nav{
+  padding: 0;
+  height: 250px;
+  align-items: flex-start;
+}
+
+/* 로고 */
+.logo{
+  margin: 10px 10px;
+  padding: 5px 20px;
+  height: 50px;
+  z-index: 200;
+}
+.svg{
+  width: 50px;
+  height: 25px;
+  background-size: contain;
+}
+
+/* GNB */
+.gnb{
+  padding: 10px 10px;
+  flex-direction: column;
+  height: 500px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0;
+  position: absolute;
+  top: -200%;
+}
+.gnb li{
+  z-index: 150;
+  margin-bottom: 20px;
+}
+
+
+/* Trigger */
+.allmenu{
+  display: block;
+  position: absolute;
+  width: 50px; 
+  height: 50px;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  z-index: 999;
+  transition: .3s;
+}
+.trigger{
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 12px;
+  transition: .3s;
+}
+.trigger span{
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: .3s;
+}
+.trigger span:nth-child(1){top: 0;}
+.trigger span:nth-child(2){top: 50%; width: 80%;}
+.trigger span:nth-child(3){top: 100%;}
+
+/* Trigger hover */
+.allmenu:hover{background-color: #FAFF00;}
+.allmenu:hover .trigger{height: 16px;}
+
+/* jQuery 에서 trigger클릭시 바뀌는 부분 */
+.allmenu.active .trigger span:nth-child(1){
+  top: 50%;
+  transform: rotate(45deg);
+}
+.allmenu.active .trigger span:nth-child(2){opacity: 0;}
+.allmenu.active .trigger span:nth-child(3){
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+.allmenu.active:hover .trigger span:nth-child(1){transform: rotate(55deg);}
+.allmenu.active:hover .trigger span:nth-child(3){transform: rotate(-55deg);}
+
+/* MAIN=================================== */
+main{
+  padding: 200px 10px 0;
+}
+.mainText{
+  font-size: 70px;
+  font-size: 4.375rem;
+  align-items: flex-start;
+}
+.mainText>div{gap: 10px}
+.mainText .mt1 video, .mt2 img{display: none;}
+.mt3{
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.mainText img{
+  height: 60px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+/* SECTION========================================= */
+section{
+  padding: 200px 10px 0;
+}
+/* trend1//////////////////// */
+.part1{
+  gap: 10px;
+  height: 100%;
+}
+section>div{
+  flex-direction: column;
+  padding: 0 0 70px 0;
+}
+.title h2{
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+.title h3{
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+.box{display: none;}
+
+.part2{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+}
+.part2 img{
+  width: 100%;
+  height: 350px;
+  border-radius: 20px;
+  background-color: #eee;
+}
+.part2 video{
+  width: 100%;
+  height: 350px;
+  border-radius: 20px;
+  background-color: #eee;
+}
+.part2 .hashTag{
+  position: static;
+  flex-wrap: wrap;
+  height: auto;
+}
+.part2 .hashTag li{height: 50px;}
+
+#trend02{flex-direction: column-reverse;}
+
+
+/* trend4//////////////////// */
+#trend04{padding: 100px 0 50px 0;}
+.tboxes>ul{flex-direction: column;}
+
+.tbox{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding-bottom: 50px;
+}
+.tbox img{
+  height: 350px;
+  background-color: #eee;
+}
+.desc{
+  position: relative;
+  background-color: transparent;
+  padding: 20px 10px;
+  height: 180px;
+}
+.desc h3{
+  color: #fff;
+  font-size: 24px;
+  font-weight: normal;
+}
+.desc .hashTag{
+  height: auto;
+  left: 10px;
+  bottom: 20px;
+  flex-direction: column;
+}
+.desc .hashTag li{
+  height: 40px;
+}
+
+/* 텍스트 애니메이션 */
+
+
+/* FOOTER============================== */
+footer{
+  padding: 30px 10px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+footer ul{
+  flex-direction: column;
+  align-items: center;
+}
+
+
+}
